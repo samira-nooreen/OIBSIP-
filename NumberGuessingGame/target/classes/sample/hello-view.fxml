@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sample.HelloController"
+      spacing="20" alignment="CENTER" style="-fx-padding: 30; -fx-background-color: #0F172A;-fx-border-color: #22D3EE;
+             -fx-border-width: 4px; ">
+
+    <Label text="Number Guessing Game 🎮" style="-fx-font-size: 30px; -fx-font-weight: bold;  -fx-text-fill: #F8FAFC;" />
+    <Label text="Make a guess between 1 and 100." style="-fx-font-size: 18px; -fx-text-fill: #F8FAFC;" />
+
+    <TextField fx:id="guess" promptText="Enter your guess" onAction="#checkGuess" maxWidth="200"  style="-fx-background-color: #1E293B; -fx-text-fill: #F8FAFC;" />
+
+    <Text fx:id="guessCounterText" text="No Of Guesses: 0" style="-fx-font-size: 20px; -fx-fill: #F8FAFC;" />
+
+    <StackPane  alignment="CENTER" >
+        <ImageView fx:id="upArrow" fitWidth="100" fitHeight="100"  />
+        <ImageView fx:id="downArrow" fitWidth="100" fitHeight="100" />
+        <ImageView fx:id="correct" fitWidth="100" fitHeight="100" />
+    </StackPane>
+
+    <Button text="Reset Game" onAction="#reset" style="-fx-font-size: 20px; -fx-background-color: #22D3EE; -fx-text-fill: #0F172A; " />
+
+
+</VBox>
